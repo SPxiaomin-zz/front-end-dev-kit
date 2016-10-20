@@ -18,6 +18,8 @@
 
         - `eslint --init`
 
+    - 添加 .eslintignore 文件，可以忽略不想 lint 的文件；
+
 ## 资料
 
 <http://eslint.org/>
