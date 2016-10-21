@@ -17,7 +17,6 @@ gulp.task('lint', () => {
     return gulp.src('./javascripts/*.js')
         .pipe(eslint())
         .pipe(eslint.format())
-        .pipe(eslint.failAfterError())
         .pipe(browserSync.stream());
 });
 

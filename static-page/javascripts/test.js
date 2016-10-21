@@ -1,5 +1,1 @@
-function test() {
-    alert('hello');
-}
-
-test();
+document.write('hello');
