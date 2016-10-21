@@ -20,6 +20,19 @@
 
     - 添加 .eslintignore 文件，可以忽略不想 lint 的文件；
 
+    - specifying globals
+
+        - inside file: `/* global var1:true, var2:false */`
+
+        - inside configuration file:
+
+                {
+                    "globals": {
+                        "var1": true,
+                        "var2": false
+                    }
+                }
+
 ## 资料
 
 <http://eslint.org/>
