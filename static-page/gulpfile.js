@@ -5,7 +5,8 @@ const eslint = require('gulp-eslint');
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
-            baseDir: '.'
+            baseDir: '.',
+            directory: true
         },
         files: ['./index.html', './css/*.css']
     });
