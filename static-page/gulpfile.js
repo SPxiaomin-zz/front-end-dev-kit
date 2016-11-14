@@ -2,20 +2,24 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
 
+const path = {
+    jsPath: ['./**/*.js', '!./node_modules/**']
+};
+
 gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
             baseDir: '.',
             directory: true
         },
-        files: ['./index.html', './css/*.css']
+        files: ['./**/*.html', './**/*.css']
     });
 
-    gulp.watch('./javascripts/*.js', ['lint']);
+    gulp.watch(path.jsPath, ['lint']);
 });
 
 gulp.task('lint', () => {
-    return gulp.src('./javascripts/*.js')
+    return gulp.src(path.jsPath)
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(browserSync.stream());
